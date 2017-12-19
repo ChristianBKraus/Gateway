@@ -1,0 +1,17 @@
+# application.yml
+
+server:
+    port: 9000
+    
+zuul.routes.ledstrip.url: 127.0.0.1:9999
+ribbon.eureka.enabled: false   
+
+management:
+  security:
+    enabled: true
+
+
+spring:
+  resources:
+    chain:
+      enabled: true 
