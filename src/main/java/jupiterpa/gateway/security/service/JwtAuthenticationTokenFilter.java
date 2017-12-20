@@ -1,9 +1,10 @@
 package jupiterpa.gateway.security.service;
 
-import jupiterpa.gateway.security.model.JwtAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
+
+import jupiterpa.gateway.security.model.JwtAuthenticationToken;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -11,11 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessingFilter {
-
+	
     public JwtAuthenticationTokenFilter() {
-        super("/rest/**");
+        super("/api/**");
     }
 
     @Override
@@ -24,16 +24,6 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
     	String header = httpServletRequest.getHeader("authorization");
 
         if (header == null || !header.startsWith("Token ")) {
-//    		java.util.Enumeration headerNames = httpServletRequest.getHeaderNames();
-//    		String  headers = "";
-//    		while ( headerNames.hasMoreElements() )
-//    		{
-//    			String headerNameKey = (String) headerNames.nextElement();
-//    			String headerNameValue = httpServletRequest.getHeader( headerNameKey );
-//    			headers = headers + "---" + headerNameKey + "/" + headerNameValue;
-//    		}
-//    		throw new RuntimeException(headers);
-
     		throw new RuntimeException("JWT Token is missing");
         }
 

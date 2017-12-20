@@ -1,16 +1,12 @@
 package jupiterpa.gateway.security.model;
 
-public class JwtUser {
-    private String userName;
-    private long id;
-    private String role;
+public class JwtUserLogin {
+    String userName;
+    String role;
+    String key;
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public void setRole(String role) {
@@ -21,11 +17,21 @@ public class JwtUser {
         return userName;
     }
 
-    public long getId() {
-        return id;
-    }
-
     public String getRole() {
         return role;
     }
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+	
+	@Override 
+	public String toString() {
+		return "Username=" + userName + " Role=" + role + " key=" + key;
+	}
+    
 }
