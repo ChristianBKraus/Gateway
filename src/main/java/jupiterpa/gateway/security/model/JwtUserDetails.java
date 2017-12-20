@@ -13,6 +13,7 @@ public class JwtUserDetails implements UserDetails {
     private Collection<? extends GrantedAuthority> authorities;
 
 
+    public JwtUserDetails() {}
     public JwtUserDetails(String userName, String token, List<GrantedAuthority> grantedAuthorities) {
         this.userName = userName;
         this.token= token;

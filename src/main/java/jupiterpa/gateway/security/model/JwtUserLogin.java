@@ -4,6 +4,14 @@ public class JwtUserLogin {
     String userName;
     String role;
     String key;
+    
+    public JwtUserLogin() {}
+    
+    public JwtUserLogin(String userName, String role, String key) {
+    	this.userName = userName;
+    	this.role = role;
+    	this.key = key;
+    }
 
     public void setUserName(String userName) {
         this.userName = userName;
