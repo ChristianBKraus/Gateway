@@ -14,4 +14,4 @@ management:
 spring:
   resources:
     chain:
-      enabled: true 
+      enabled: true  
