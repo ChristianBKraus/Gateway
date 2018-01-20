@@ -1,5 +1,11 @@
 # application.yml
 
+application:
+    name: RaspberryPiGateway
+    description: Gateway to RaspberryPi
+    version: 1.0.0  
+    userPassword: password
+    adminPassword: password
 server:
     port: 9000
     
