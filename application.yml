@@ -3,7 +3,7 @@
 server:
     port: 9000
     
-zuul.routes.ledstrip.url: 127.0.0.1:9999
+zuul.routes.ledstrip.url: http://localhost:9999/ledstrip
 ribbon.eureka.enabled: false   
 
 management:
