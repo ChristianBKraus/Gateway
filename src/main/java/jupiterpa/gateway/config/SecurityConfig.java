@@ -41,6 +41,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET, "/ledstrip/**").hasRole("USER")
 			.antMatchers(HttpMethod.PUT, "/ledstrip/**").hasRole("ADMIN")
 			.antMatchers(HttpMethod.POST, "/ledstrip/**").hasRole("ADMIN")
-			.anyRequest().permitAll();
+			.anyRequest().denyAll();
 	}
 }
